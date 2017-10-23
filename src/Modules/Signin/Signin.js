@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 
 import { TabViewAnimated, TabBar, SceneMap } from 'react-native-tab-view';
-import {} from 'react-native-keyboard-aware-scrollview';
 
 
 // // Sigin in Tab
@@ -19,18 +18,20 @@ import {} from 'react-native-keyboard-aware-scrollview';
 const SigninTab = () => {
     // let windowHeight = window.d
     return (
-        <View style={AuthStyles.TabContainer}>
-            <View style={AuthStyles.SigninTextFieldsContainer}>
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/user_id_hdpi.png')} placeHolder="User ID" />
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/password_hdpi.png')} placeHolder="Password" />
+        <ScrollView>
+            <View style={AuthStyles.TabContainer}>
+                <View style={AuthStyles.SigninTextFieldsContainer}>
+                    <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/user_id_hdpi.png')} placeHolder="User ID" />
+                    <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/password_hdpi.png')} placeHolder="Password" />
+                </View>
+                <View style={AuthStyles.AuthButton}>
+                    <AuthButton title="Continue" />
+                    <TouchableOpacity>
+                        <Text style={AuthStyles.ForgotPassText}>Forgot Password</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
-            <View style={AuthStyles.AuthButton}>
-                <AuthButton title="Continue" />
-                <TouchableOpacity>
-                    <Text style={AuthStyles.ForgotPassText}>Forgot Password</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -38,21 +39,24 @@ const SigninTab = () => {
 
 const SignupTab = () => {
     return (
-
-        <View style={AuthStyles.TabContainer}>
-            <View style={AuthStyles.SignunTextFieldsContainer}>
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/user_id_hdpi.png')} placeHolder="User ID" />
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/password_hdpi.png')} placeHolder="Password" />
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/email_hdpi.png')} placeHolder="Email" />
-                <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/phone_hdpi.png')} placeHolder="Phone" style={{ paddingLeft: 10 }} />
+        <ScrollView>
+            <View>
+                <View style={AuthStyles.TabContainer}>
+                    <View style={AuthStyles.SignunTextFieldsContainer}>
+                        <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/user_id_hdpi.png')} placeHolder="User ID" />
+                        <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/password_hdpi.png')} placeHolder="Password" />
+                        <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/email_hdpi.png')} placeHolder="Email" />
+                        <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/phone_hdpi.png')} placeHolder="Phone" style={{ paddingLeft: 10 }} />
+                    </View>
+                    <View style={AuthStyles.AuthButton} >
+                        <AuthButton title="Sign up" />
+                        <TouchableOpacity>
+                            <Text style={AuthStyles.ForgotPassText}>Have an account</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
-            <View style={AuthStyles.AuthButton} >
-                <AuthButton title="Sign up" />
-                <TouchableOpacity>
-                    <Text style={AuthStyles.ForgotPassText}>Have an account</Text>
-                </TouchableOpacity>
-            </View>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -78,27 +82,23 @@ class Signin extends Component {
     });
     render() {
         return (
-            <ScrollView contentContainerStyle={{ display: 'flex', flexDirection: 'column' }}>
-                <View>
-                    <View style={AuthStyles.container}>
-                        <View style={AuthStyles.Header}>
-                            <View style={AuthStyles.HeaderLogoContainer}>
-                                <View style={{}}>
-                                    <Image source={require('./../../Resourses/Logo.png')} style={AuthStyles.LogoImage} opacity={0.4} />
-                                    <Text style={AuthStyles.LogoText}>LOGO</Text>
-                                </View>
-                            </View>
+            <View style={AuthStyles.container}>
+                <View style={AuthStyles.Header}>
+                    <View style={AuthStyles.HeaderLogoContainer}>
+                        <View style={{}}>
+                            <Image source={require('./../../Resourses/Logo.png')} style={AuthStyles.LogoImage} opacity={0.4} />
+                            <Text style={AuthStyles.LogoText}>LOGO</Text>
                         </View>
-
-                        <TabViewAnimated
-                            style={AuthStyles.Tabs}
-                            navigationState={this.state}
-                            renderScene={this._renderScene}
-                            renderHeader={this._renderHeader}
-                            onIndexChange={this._handleIndexChange} />
                     </View>
                 </View>
-            </ScrollView>
+
+                <TabViewAnimated
+                    style={AuthStyles.Tabs}
+                    navigationState={this.state}
+                    renderScene={this._renderScene}
+                    renderHeader={this._renderHeader}
+                    onIndexChange={this._handleIndexChange} />
+            </View>
         );
     }
 }

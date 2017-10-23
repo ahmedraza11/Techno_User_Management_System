@@ -2,8 +2,6 @@
 export const AuthStyles = {
     MainTabContainer: {
         display: 'flex',
-        borderWidth: 1,
-        borderColor: 'red',
         height: '100%'       
     },
     container: {
@@ -43,18 +41,14 @@ export const AuthStyles = {
         height: '100%',
         flexDirection: 'column',
         width: '100%',
-        borderWidth: 3,
-        justifyContent:"space-between",
-        borderColor: 'pink',
+        alignItems:"center",
     },
     AuthButton: {
         display: 'flex',
         width: '100%',
         alignSelf:'center',
-        marginTop: '3%',
+        marginTop: '10%',
         marginBottom: '4%',
-        borderWidth: 1,
-        borderColor: 'green'
     },
     ForgotPassText: {
         fontSize: 15,
@@ -73,7 +67,5 @@ export const AuthStyles = {
         display: 'flex',
         alignSelf: 'center',
         justifyContent:'space-between',
-        borderWidth: 1,
-        
     }
 }
