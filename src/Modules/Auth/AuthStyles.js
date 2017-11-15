@@ -2,7 +2,7 @@
 export const AuthStyles = {
     MainTabContainer: {
         display: 'flex',
-        height: '100%'       
+        height: '100%'
     },
     container: {
         display: 'flex',
@@ -40,14 +40,14 @@ export const AuthStyles = {
         flex: 1,
         height: '100%',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         width: '100%',
-        alignItems:"center",
+        alignItems: "center",
     },
     AuthButton: {
         display: 'flex',
         width: '100%',
-        alignSelf:'center',
-        marginTop: '10%',
+         marginTop: '10%',
         marginBottom: '4%',
     },
     ForgotPassText: {
@@ -66,6 +66,6 @@ export const AuthStyles = {
     SigninTextFieldsContainer: {
         display: 'flex',
         alignSelf: 'center',
-        justifyContent:'space-between',
+        justifyContent: 'space-between',
     }
 }
