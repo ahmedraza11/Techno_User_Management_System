@@ -1,4 +1,5 @@
 import { AppRegistry } from 'react-native';
-import App from './App';
+import { AppNavigation } from './src/Navigation';
 
-AppRegistry.registerComponent('jobsapp', () => App);
+
+AppRegistry.registerComponent('jobsapp', () => AppNavigation);
