@@ -2,11 +2,12 @@ import React from 'react';
 
 import { Button } from 'react-native-elements';
 
-const AuthButton = ({ title }) => {
+const AuthButton = ({ title, onPress }) => {
     return (
         <Button
             title={title}
             buttonStyle={AuthButtonStyles.Container}
+            onPress={onPress}
         />
     )
 }

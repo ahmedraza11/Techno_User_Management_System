@@ -24,6 +24,7 @@ export class Signin extends Component {
     };
 
     render() {
+        const { navigate } = this.props.navigation;
         return (
                 <ScrollView contentContainerStyle={{ display: 'flex'}}>
                     <View style={AuthStyles.TabContainer}>
@@ -32,7 +33,7 @@ export class Signin extends Component {
                             <TextField underlineColorAndroid="transparent" icon={require('./../../Resourses/signin_signup_icons/password_hdpi.png')} placeHolder="Password" />
                         </View>
                         <View style={AuthStyles.AuthButton}>
-                            <AuthButton title="Continue" />
+                            <AuthButton title="Continue" onPress={() => navigate('dashboard')}/>
                             <TouchableOpacity>
                                 <Text style={AuthStyles.ForgotPassText}>Forgot Password</Text>
                             </TouchableOpacity>

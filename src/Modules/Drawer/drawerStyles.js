@@ -29,6 +29,9 @@ export const DrawerStyles = {
         justifyContent: 'flex-end',
         alignItems: 'center',
         paddingBottom: 10,
+        zIndex: 0,
+        position: 'absolute',
+        bottom: 0
     },
     drawerFooterAddButton:{
         display: 'flex',
@@ -43,10 +46,9 @@ export const DrawerStyles = {
         color: 'white'
     },
     drawerSendButton: {
-        backgroundColor: 'white',
-        color: blue,
+        backgroundColor: '#fff',
         borderWidth: 0.5,
         borderColor: '#D1D1D1',
-        marginBottom: -10,
+        height: 50,
     }
 }

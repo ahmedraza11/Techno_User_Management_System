@@ -9,7 +9,6 @@ import {
     AllTab,
     GroupTab,
     PeopleTab
-
 } from '../Modules';
 
 const drawNavigator = DrawerNavigator(
@@ -17,7 +16,7 @@ const drawNavigator = DrawerNavigator(
         dashboard: { screen: Dashboard }
     },
     {
-        contentComponent: props => {
+        contentComponent: () => {
             return (
                 <View>
                     <AppDrawer />
@@ -32,7 +31,6 @@ export const Tabs = TabNavigator(
         Signin: { screen: Signin },
         Signup: { screen: Signup },
     },
-
     {
         tabBarPosition: 'top',
         animationEnabled: true,
@@ -46,38 +44,18 @@ export const Tabs = TabNavigator(
     }
 )
 
-// export const DrawerTabs = TabNavigator(
-//     {
-//         allScreen: { screen: AllTab },
-//         groupScreen: { screen: GroupTab },
-//         peopleScreen: { screen: PeopleTab }
-//     },
-//     {
-//         tabBarPosition: 'top',
-//         animationEnabled: true,
-//         tabBarOptions: {
-//             tinColor: '#fff',
-//             activeTintColor: '#fff',
-//             indicatorStyle: {
-//                 backgroundColor: 'white'
-//             }
-//         },
-//     }
-// )
-
 drawNavigator.navigationOptions = {
     header: null
 }
 
-export const navigation = StackNavigator(
+export const AppNavigation = StackNavigator(
     {
         tabs: { screen: Tabs },
-        // drawerTabs: { screen: DrawerTabs },
         dashboardScreen: { screen: Dashboard },
         appDrawer: { screen: drawNavigator }
     },
     {
-        initialRouteName: 'appDrawer',
+        initialRouteName: 'tabs',
         headerMode: 'screen'
     }
 );

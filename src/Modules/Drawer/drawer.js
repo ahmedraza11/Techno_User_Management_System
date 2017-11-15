@@ -5,7 +5,6 @@ import {
     Text,
     TouchableOpacity
 } from 'react-native';
-
 import {
     Icon,
     Button
@@ -54,7 +53,11 @@ export class AppDrawer extends Component {
                 <Button
                     title="Send"
                     buttonStyle={DrawerStyles.drawerSendButton}
+                    containerViewStyle={{ zIndex: 9999, position: 'absolute', bottom: '9%', width: '90%' }}
                     color={blue}
+                    textStyle={{ color: blue }}
+                    raised
+                    backgroundColor={'#fff'}
                 />
                 <View style={DrawerStyles.drawerFooter}>
                     <TouchableOpacity>
