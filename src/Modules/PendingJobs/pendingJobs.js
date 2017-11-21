@@ -25,10 +25,10 @@ export class PendingJobs extends Component {
     _handleIndexChange = index => this.setState({ index });
 
     _renderHeader = props => (
-        <View style={{ width: '100%', backgroundColor: 'white'}}>
-            <TabBar labelStyle={{ fontSize: 10, color: '#4081F2' }} indicatorStyle={{ backgroundColor: '#4081F2' }} style={{ backgroundColor: 'white', width: 250 }} {...props} />
+        <View style={{ width: '100%', backgroundColor: 'white' }}>
+            <TabBar labelStyle={{ fontSize: 10, color: '#4081F2', marginLeft: 0, marginRight: 0 }} indicatorStyle={{ backgroundColor: '#4081F2' }} style={{ backgroundColor: 'white' }} tabStyle={{ width: 125 }} {...props} />
         </View>
-        );
+    );
 
     _renderScene = SceneMap({
         viewBy: ViewBy,
@@ -55,7 +55,7 @@ export class PendingJobs extends Component {
                                 <Text style={PendingJobsStyles.BannerSubTitle}>Approve By Jack Q 31.10.2017</Text>
                                 <Text style={PendingJobsStyles.BannerSubTitle}>Job ID: 123d456Ia</Text>
                             </View>
-                            <Button title="Job Details" backgroundColor="#4081F2" buttonStyle={PendingJobsStyles.BannerButton} />
+                            <Button title="Job Details" containerViewStyle={{marginLeft:0}} backgroundColor="#4081F2" buttonStyle={PendingJobsStyles.BannerButton} />
                         </View>
                     </View>
                 </View>

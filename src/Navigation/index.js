@@ -59,7 +59,7 @@ export const AppNavigation = StackNavigator(
         pendingJobScreen: { screen: PendingJobs }
     },
     {
-        initialRouteName: 'pendingJobScreen',
+        initialRouteName: 'tabs',
         headerMode: 'screen'
     }
 );

@@ -12,8 +12,7 @@ import {
 export class AwaitingResponse extends Component {
     render(){
         return(
-            <View>
-                <Text>Welcome To Awaiting Response By Tab</Text>
+            <View style={{width: '100%',height: '100%',backgroundColor: 'white'}}>
             </View>
         )
     }

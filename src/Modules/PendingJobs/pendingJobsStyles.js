@@ -25,7 +25,8 @@ export const PendingJobsStyles = {
     BannerInnerContainer: {
         width: '100%',
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        alignItems: 'flex-start',
     },
     BannerTitle: {
         fontSize: 18,
@@ -46,7 +47,7 @@ export const PendingJobsStyles = {
         width: 120,
         height: 33,
         display: 'flex',
-        marginTop: 10        
+        marginTop: 10,
     },
     TabViewMainContainer: {
         width: '100%',

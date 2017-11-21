@@ -14,8 +14,7 @@ import {
 export class NewJob extends Component {
     render() {
         return (
-            <View style={{display: 'flex',flexDirection: 'column',justifyContent: 'space-between'}}>
-
+            <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' ,paddingBottom:50}}>
                 <ScrollView>
                     <View style={NewJobStyles.container}>
                         <View style={NewJobStyles.FieldArea}>
@@ -90,13 +89,13 @@ export class NewJob extends Component {
                             </View>
                         </View>
                     </View>
-                <View style={{ width: '100%',flexGrow:1, height: 60, padding: 5,zIndex: 17, backgroundColor: 'white',alignItems: 'center',  display: 'flex', alignSelf: 'flex-end' }}>
+                </ScrollView>
+                <View style={{ position: 'absolute', bottom: 0, width: '100%', flexGrow: 1, height: 60, padding: 5, zIndex: 17, backgroundColor: 'white', alignItems: 'center', display: 'flex', alignSelf: 'flex-end' }}>
                     <View style={{ display: 'flex', flexDirection: 'row' }}>
                         <Button title="Save" color="#4081F2" buttonStyle={{ backgroundColor: 'white', width: 120 }} />
                         <Button title="Forward" color="white" buttonStyle={{ backgroundColor: '#4081F2', width: 120 }} />
                     </View>
                 </View>
-                </ScrollView>
             </View>
         );
     }
