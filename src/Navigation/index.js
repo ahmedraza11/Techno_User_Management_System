@@ -8,7 +8,9 @@ import {
     AppDrawer,
     AllTab,
     GroupTab,
-    PeopleTab
+    PeopleTab,
+    Jobs,
+    PendingJobs
 } from '../Modules';
 
 const drawNavigator = DrawerNavigator(
@@ -52,10 +54,12 @@ export const AppNavigation = StackNavigator(
     {
         tabs: { screen: Tabs },
         dashboardScreen: { screen: Dashboard },
-        appDrawer: { screen: drawNavigator }
+        appDrawer: { screen: drawNavigator },
+        jobsScreen: { screen: Jobs },
+        pendingJobScreen: { screen: PendingJobs }
     },
     {
-        initialRouteName: 'tabs',
+        initialRouteName: 'pendingJobScreen',
         headerMode: 'screen'
     }
 );
