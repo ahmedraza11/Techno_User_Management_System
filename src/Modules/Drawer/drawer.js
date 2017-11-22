@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import { AllTab, GroupTab, PeopleTab } from '../';
+import { DrawerStyles } from './drawerStyles';
+import { blue } from '../../Constants/color';
 import {
     View,
     Text,
     TouchableOpacity
 } from 'react-native';
+
 import {
     Icon,
     Button
 } from 'react-native-elements';
 import { Scene, TabViewAnimated, SceneMap, TabBar } from 'react-native-tab-view';
 
-import { DrawerStyles } from './drawerStyles';
-import { blue } from '../../Constants/color';
 
 export class AppDrawer extends Component {
     constructor(props) {
