@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StackNavigator, TabNavigator, DrawerNavigator, DrawerItems } from 'react-navigation';
 import { ScrollView, View, Text } from "react-native";
 import {
@@ -13,12 +13,17 @@ import {
     PendingJobs
 } from '../Modules';
 
+function toggleDrawer(state) {
+
+}
+
 const drawNavigator = DrawerNavigator(
     {
         dashboard: { screen: Dashboard }
     },
     {
         contentComponent: () => {
+            var name = "ahmed";
             return (
                 <View>
                     <AppDrawer />

@@ -14,7 +14,7 @@ import {
 export class NewJob extends Component {
     render() {
         return (
-            <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' ,paddingBottom:50}}>
+            <View style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' ,paddingBottom:60}}>
                 <ScrollView>
                     <View style={NewJobStyles.container}>
                         <View style={NewJobStyles.FieldArea}>
@@ -85,7 +85,7 @@ export class NewJob extends Component {
                         <View style={NewJobStyles.NoteArea}>
                             <View style={NewJobStyles.Roler}>
                                 <Text style={NewJobStyles.TextFieldHeading}>Note</Text>
-                                <TextInput multiline={true} underlineColorAndroid="transparent" placeholder="Your Note" placeholderTextColor="#A6C3F6" style={NewJobStyles.NoteTextField} />
+                                <TextInput multiline={true} autoGrow={true} numberOfLines={4} underlineColorAndroid="transparent" placeholder="Your Note" placeholderTextColor="#A6C3F6" style={NewJobStyles.NoteTextField} />
                             </View>
                         </View>
                     </View>

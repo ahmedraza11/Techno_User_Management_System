@@ -57,7 +57,7 @@ export class Jobs extends Component {
     render() {
 
         return (
-            <View style={{display: 'flex',flex: 1}}>
+            <View style={{display: 'flex',flex: 1,backgroundColor:"white"}}>
                <Header
                     leftComponent={<HeaderAvatar/>}
                     centerComponent={{ text: 'Adam Sandman', style: JobsStyles.header_title }}
