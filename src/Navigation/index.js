@@ -10,7 +10,8 @@ import {
     GroupTab,
     PeopleTab,
     Jobs,
-    PendingJobs
+    PendingJobs,
+    Setting
 } from '../Modules';
 
 function toggleDrawer(state) {
@@ -22,11 +23,10 @@ const drawNavigator = DrawerNavigator(
         dashboard: { screen: Dashboard }
     },
     {
-        contentComponent: () => {
-            var name = "ahmed";
+        contentComponent: ({navigation}) => {
             return (
                 <View>
-                    <AppDrawer />
+                    <AppDrawer navigation={navigation} />
                 </View>
             );
         }
@@ -61,7 +61,8 @@ export const AppNavigation = StackNavigator(
         dashboardScreen: { screen: Dashboard },
         appDrawer: { screen: drawNavigator },
         jobsScreen: { screen: Jobs },
-        pendingJobScreen: { screen: PendingJobs }
+        pendingJobScreen: { screen: PendingJobs },
+        settingScreen: {screen: Setting}
     },
     {
         initialRouteName: 'tabs',

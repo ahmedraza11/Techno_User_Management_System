@@ -4,6 +4,7 @@ import { MenuDrawerStyle } from './menuDrawerStyles';
 import { Avatar } from 'react-native-elements';
 export class MenuDrawer extends Component {
     render() {
+        const {navigate} = this.props;
         return (
             <View style={MenuDrawerStyle.mainContainer}>
                 <View style={MenuDrawerStyle.Header}>
@@ -12,7 +13,7 @@ export class MenuDrawer extends Component {
                             <Avatar
                                 rounded
                                 large
-                                source={require('./avatar.jpg')}
+                                source={require('../../Resourses/avatar.jpg')}
                                 activeOpacity={0.7}
                             />
                             <Text style={MenuDrawerStyle.userName}>Adam Sandman</Text>
@@ -59,7 +60,7 @@ export class MenuDrawer extends Component {
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/Next_Icon_hdpi.png')} />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=>navigate('settingScreen')} >
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/setings_icon_hdpi.png')} />
                                 <Text style={MenuDrawerStyle.MenuItem}>Settings</Text>

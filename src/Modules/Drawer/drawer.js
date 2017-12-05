@@ -38,7 +38,10 @@ export class AppDrawer extends Component {
         groups: GroupTab,
     });
     render() {
+        const { navigate } = this.props.navigation;
         return (
+            ////``````````First Drawer```````````/////////
+            
             // <View style={DrawerStyles.drawerContainer}>
             //     <View style={DrawerStyles.drawerHeader}>
             //         <Text style={DrawerStyles.drawerHeaderText}>Send Invitation</Text>
@@ -76,7 +79,7 @@ export class AppDrawer extends Component {
 
             ////``````````Second Drawer```````````/////////
 
-            <MenuDrawer />
+            <MenuDrawer navigate={navigate}/>
         )
     }
 }

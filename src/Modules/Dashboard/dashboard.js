@@ -14,7 +14,7 @@ import {
 } from 'react-native-elements';
 
 export class Dashboard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             checked: false
@@ -33,17 +33,9 @@ export class Dashboard extends Component {
                     rightComponent={{ icon: 'more-vert', color: blue }}
                     outerContainerStyles={{ backgroundColor: 'white' }}
                 />
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around',flexWrap: 'wrap',alignItems:'center', height: 550,marginTop:250, width: '100%', alignItems: 'center' }}>
+                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center', height: 550, marginTop: 250, width: '95%', alignItems: 'center' }}>
                     <Button title="Jobs Screen" onPress={() => navigate('jobsScreen')} buttonStyle={{ display: 'flex', backgroundColor: "#4081F2" }} />
-                    <Button title="Pending Job Screen" onPress={() => navigate('pendingJobScreen')} buttonStyle={{ display: 'flex', backgroundColor: '#19A35E' }} />
-                    <CheckBox
-                        center
-                        title='Change Drawer'
-                        checkedIcon='dot-circle-o'
-                        uncheckedIcon='circle-o'
-                        onPress={()=>this.setState({checked: !this.state.checked})}
-                        checked={this.state.checked}
-                    />
+                    <Button title="Pending Job Screen" onPress={() => navigate('pendingJobScreen')} buttonStyle={{ display: 'flex', backgroundColor: '#19A35E',marginTop:10 }} />
                 </View>
             </View>
         );
