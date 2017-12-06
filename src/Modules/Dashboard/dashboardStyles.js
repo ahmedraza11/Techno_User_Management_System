@@ -1,6 +1,9 @@
 import { blue } from '../../Constants/color';
 
 export const DashboardStyles = {
+    main_container: {
+        backgroundColor: 'white',
+    },
     header_title: {
         flex: 1,
         color: blue,
