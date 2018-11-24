@@ -50,7 +50,7 @@ export class Setting extends Component {
                             <Text style={SettingStyle.TextFieldTitle}>Password</Text>
                             <TextInput underlineColorAndroid="#7AABFF" style={SettingStyle.TextField} secureTextEntry={true} />
                         </View>
-                        <View style={SettingStyle.TextFieldContainer}>
+                        {/* <View style={SettingStyle.TextFieldContainer}>
                             <View style={SettingStyle.ImageTextFieldTitleContainer}>
                                 <Image style={{ width: 34, height:21}} source={require('./../../Resourses/visa.png')} />
                                 <Text style={SettingStyle.ImageTextFieldTitle}>VISA $</Text>
@@ -70,10 +70,12 @@ export class Setting extends Component {
                                 <Text style={SettingStyle.ImageTextFieldTitle}>CASH $</Text>
                             </View>
                             <TextInput underlineColorAndroid="#7AABFF" style={SettingStyle.TextField}  value="10%"/>
-                        </View>
+                        </View> */}
 
                     </ScrollView>
-                    <Button raised title="Save" backgroundColor="#4081F2" />
+                    <View style={{ marginBottom: 5 }}>
+                        <Button raised title="Save" backgroundColor="#4081F2" />
+                    </View>
                 </View>
             </View>
         )

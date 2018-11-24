@@ -15,7 +15,6 @@ import {
 } from '../Modules';
 
 function toggleDrawer(state) {
-
 }
 
 const drawNavigator = DrawerNavigator(
@@ -36,13 +35,13 @@ const drawNavigator = DrawerNavigator(
 export const Tabs = TabNavigator(
     {
         Signin: { screen: Signin },
-        Signup: { screen: Signup },
+        // Signup: { screen: Signup },
     },
     {
         tabBarPosition: 'top',
         animationEnabled: true,
         tabBarOptions: {
-            tinColor: '#fff',
+            // tinColor: '#fff',
             activeTintColor: '#fff',
             indicatorStyle: {
                 backgroundColor: 'white'

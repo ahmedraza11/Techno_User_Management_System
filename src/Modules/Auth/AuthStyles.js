@@ -43,11 +43,12 @@ export const AuthStyles = {
         justifyContent: 'space-between',
         width: '100%',
         alignItems: "center",
+        marginTop: 30
     },
     AuthButton: {
         display: 'flex',
         width: '100%',
-         marginTop: '10%',
+        marginTop: '10%',
         marginBottom: '4%',
     },
     ForgotPassText: {

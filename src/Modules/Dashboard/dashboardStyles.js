@@ -3,6 +3,9 @@ import { blue } from '../../Constants/color';
 export const DashboardStyles = {
     main_container: {
         backgroundColor: 'white',
+        display: "flex",
+        flexDirection: 'row'
+
     },
     header_title: {
         flex: 1,
@@ -11,5 +14,11 @@ export const DashboardStyles = {
         display: 'flex',
         paddingLeft: 35,
         justifyContent: 'flex-start'
+    },
+    DashboardItems: {
+        width: '42%',
+        height: 140,
+        margin: 10,
+        borderRadius: 10
     }
 }

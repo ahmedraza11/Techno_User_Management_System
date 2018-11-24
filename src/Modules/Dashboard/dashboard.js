@@ -4,7 +4,9 @@ import { blue } from '../../Constants/color';
 import {
     View,
     Text,
-    Switch
+    Switch,
+    ScrollView,
+    TouchableOpacity
 } from 'react-native';
 
 import {
@@ -33,10 +35,36 @@ export class Dashboard extends Component {
                     rightComponent={{ icon: 'more-vert', color: blue }}
                     outerContainerStyles={{ backgroundColor: 'white' }}
                 />
-                <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap', alignItems: 'center', height: 550, marginTop: 250, width: '95%', alignItems: 'center' }}>
-                    <Button title="Jobs Screen" onPress={() => navigate('jobsScreen')} buttonStyle={{ display: 'flex', backgroundColor: "#4081F2" }} />
-                    <Button title="Pending Job Screen" onPress={() => navigate('pendingJobScreen')} buttonStyle={{ display: 'flex', backgroundColor: '#19A35E',marginTop:10 }} />
+
+                <View style={{ marginTop: 70 }}>
+                    <ScrollView contentContainerStyle={{ width: '100%', padding: 20, display: 'flex', flexGrow: 1, flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#0984e3' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#6c5ce7' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#d63031' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#00b894' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#ff793f' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#b71540' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: 'red' }]}>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: 'red' }]}>
+                        </TouchableOpacity>
+                    </ScrollView>
                 </View>
+
+
             </View>
         );
     }

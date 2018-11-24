@@ -16,9 +16,9 @@ export class MenuDrawer extends Component {
                                 source={require('../../Resourses/avatar.jpg')}
                                 activeOpacity={0.7}
                             />
-                            <Text style={MenuDrawerStyle.userName}>Adam Sandman</Text>
-                            <Text style={MenuDrawerStyle.userBalance}>$2000.00</Text>
-                            <Text style={MenuDrawerStyle.balanceText}>Balance</Text>
+                            <Text style={MenuDrawerStyle.userName}>Waseem</Text>
+                            {/* <Text style={MenuDrawerStyle.userBalance}>$2000.00</Text> */}
+                            <Text style={MenuDrawerStyle.balanceText}>CEO Techo Net Cable</Text>
                         </View>
                     </View>
                 </View>
@@ -28,50 +28,45 @@ export class MenuDrawer extends Component {
                         <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/home_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>Home</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Dashboard</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/new_job_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>New Job</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Active User's</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image style={{ width: 21, height: 21 }} source={require('./../../Resourses/hamburger_menu_icons/briefcase.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>My Job</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Inactive User's</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/schedule_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>Schedule</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Complains</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/users_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>Users</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Expired / Balance</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        {/* <TouchableOpacity>
                             <View style={MenuDrawerStyle.MenuAngularItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/Next_Icon_hdpi.png')} />
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         <TouchableOpacity onPress={()=>navigate('settingScreen')} >
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/setings_icon_hdpi.png')} />
                                 <Text style={MenuDrawerStyle.MenuItem}>Settings</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={MenuDrawerStyle.MenuAboutItemContainer}>
-                                <Image source={require('./../../Resourses/hamburger_menu_icons/about_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>About</Text>
-                            </View>
-                        </TouchableOpacity>
+
                     </ScrollView>
                 </View>
             </View>
