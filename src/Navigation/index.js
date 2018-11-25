@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StackNavigator, TabNavigator, DrawerNavigator, DrawerItems } from 'react-navigation';
 import { ScrollView, View, Text } from "react-native";
+import SplashScreen from 'react-native-splash-screen'
 import {
     Signup,
     Signin,
