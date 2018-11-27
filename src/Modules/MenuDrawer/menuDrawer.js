@@ -4,7 +4,7 @@ import { MenuDrawerStyle } from './menuDrawerStyles';
 import { Avatar } from 'react-native-elements';
 export class MenuDrawer extends Component {
     render() {
-        const {navigate} = this.props;
+        const { navigate } = this.props;
         return (
             <View style={MenuDrawerStyle.mainContainer}>
                 <View style={MenuDrawerStyle.Header}>
@@ -31,16 +31,10 @@ export class MenuDrawer extends Component {
                                 <Text style={MenuDrawerStyle.MenuItem}>Dashboard</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigate('usersScreen')}>
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/new_job_icon_hdpi.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>Active User's</Text>
-                            </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity>
-                            <View style={MenuDrawerStyle.MenuItemContainer}>
-                                <Image style={{ width: 21, height: 21 }} source={require('./../../Resourses/hamburger_menu_icons/briefcase.png')} />
-                                <Text style={MenuDrawerStyle.MenuItem}>Inactive User's</Text>
+                                <Text style={MenuDrawerStyle.MenuItem}>Users</Text>
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity>
@@ -60,7 +54,7 @@ export class MenuDrawer extends Component {
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/Next_Icon_hdpi.png')} />
                             </View>
                         </TouchableOpacity> */}
-                        <TouchableOpacity onPress={()=>navigate('settingScreen')} >
+                        <TouchableOpacity onPress={() => navigate('settingScreen')} >
                             <View style={MenuDrawerStyle.MenuItemContainer}>
                                 <Image source={require('./../../Resourses/hamburger_menu_icons/setings_icon_hdpi.png')} />
                                 <Text style={MenuDrawerStyle.MenuItem}>Settings</Text>
