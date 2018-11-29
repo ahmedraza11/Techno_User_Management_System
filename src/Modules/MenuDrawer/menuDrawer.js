@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { MenuDrawerStyle } from './menuDrawerStyles';
-import { Avatar } from 'react-native-elements';
+import { Avatar, Icon } from 'react-native-elements';
 export class MenuDrawer extends Component {
     render() {
         const { navigate } = this.props;

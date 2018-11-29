@@ -6,3 +6,4 @@ export { AppDrawer, AllTab, GroupTab, PeopleTab } from './Drawer';
 export { MenuDrawer } from './MenuDrawer/menuDrawer';
 export { Setting } from './Setting/setting';
 export { Users } from './Users';
+export { AddUser } from './AddUser';

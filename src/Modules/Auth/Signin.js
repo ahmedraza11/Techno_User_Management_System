@@ -27,7 +27,7 @@ export class Signin extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <ScrollView contentContainerStyle={{ display: 'flex' }}>
+            <ScrollView contentContainerStyle={{ display: 'flex' }}  keyboardShouldPersistTaps='handled'>
                 <View>
                     <View style={{ width: '100%', height: 200, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4081F2', elevation: 3 }}>
                         <Image source={require('./../../Resourses/logo_white.png')} style={{ width: 150, height: 150 }} />

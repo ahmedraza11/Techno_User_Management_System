@@ -12,7 +12,8 @@ import {
 import {
     Header,
     Button,
-    CheckBox
+    CheckBox,
+    Icon
 } from 'react-native-elements';
 
 export class Dashboard extends Component {
@@ -38,28 +39,46 @@ export class Dashboard extends Component {
 
                 <View style={{ marginTop: 70 }}>
                     <ScrollView contentContainerStyle={{ width: '100%', padding: 20, display: 'flex', flexGrow: 1, flexDirection: 'row', justifyContent: 'space-around', flexWrap: 'wrap' }}>
-                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#0984e3' }]}>
+                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#0984e3' }]} onPress={() => navigate('addUserScreen')}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="person-add" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Add User</Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#6c5ce7' }]}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="monetization-on" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Fees Entry</Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#d63031' }]}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="person-pin" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Users</Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#00b894' }]}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="report" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Complains</Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#ff793f' }]}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="group" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Recovery Team</Text>
+                            </View>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: '#b71540' }]}>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: 'red' }]}>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity style={[DashboardStyles.DashboardItems, { backgroundColor: 'red' }]}>
+                            <View style={DashboardStyles.DashBoardIconContainer}>
+                                <Icon name="power-settings-new" color={'#fff'} size={45} />
+                                <Text style={DashboardStyles.DashboardItemsText}>Logout</Text>
+                            </View>
                         </TouchableOpacity>
                     </ScrollView>
                 </View>

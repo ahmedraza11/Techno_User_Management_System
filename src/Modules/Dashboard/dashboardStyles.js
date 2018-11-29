@@ -20,5 +20,19 @@ export const DashboardStyles = {
         height: 140,
         margin: 10,
         borderRadius: 10
+    },
+    DashBoardIconContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        height: '100%'
+    },
+    DashboardItemsText: {
+        fontSize: 13,
+        // fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 5,
+        textAlign: 'center'
     }
 }

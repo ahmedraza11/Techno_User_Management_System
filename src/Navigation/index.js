@@ -13,7 +13,8 @@ import {
     Jobs,
     PendingJobs,
     Setting,
-    Users
+    Users,
+    AddUser
 } from '../Modules';
 
 function toggleDrawer(state) {
@@ -64,7 +65,8 @@ export const AppNavigation = StackNavigator(
         jobsScreen: { screen: Jobs },
         pendingJobScreen: { screen: PendingJobs },
         settingScreen: { screen: Setting },
-        usersScreen: {screen: Users}
+        usersScreen: { screen: Users },
+        addUserScreen: { screen: AddUser }
 
     },
     {
