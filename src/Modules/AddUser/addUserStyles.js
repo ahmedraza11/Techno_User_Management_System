@@ -56,5 +56,29 @@ export const AddUserStyles = {
         color: '#7AABFF',
         fontSize: 15,
         marginLeft: 10
+    },
+    PackagePickerContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        width: '100%',
+        alignItems: 'center',
+        marginLeft: 36
+    },
+    DatePickerContainer: {
+        height: 50,
+        display: 'flex',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    DatePickerIconStyles: {
+        display: 'flex',
+        alignItems: 'flex-start'
+    },
+    SelectedDateText: {
+        fontSize: 15,
+        marginLeft: 10,
+        textAlign: 'center',
+        color: '#4081F2'
     }
+
 }
