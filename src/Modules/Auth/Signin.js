@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { TextField, AuthButton } from './../../Common';
 import { AuthStyles } from './AuthStyles';
+
+const Realm = require('realm');
+
 import {
     View,
     Text,
@@ -13,11 +16,19 @@ import {
 import SplashScreen from 'react-native-splash-screen';
 
 export class Signin extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { realm: null };
+    }
 
     componentDidMount() {
         // do stuff while splash screen is shown
         // After having done stuff (such as async tasks) hide the splash screen
         SplashScreen.hide();
+    }
+
+    componentWillMount() {
+        
     }
 
     static navigationOptions = {
@@ -26,8 +37,9 @@ export class Signin extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
+        
         return (
-            <ScrollView contentContainerStyle={{ display: 'flex' }}  keyboardShouldPersistTaps='handled'>
+            <ScrollView contentContainerStyle={{ display: 'flex' }} keyboardShouldPersistTaps='handled'>
                 <View>
                     <View style={{ width: '100%', height: 200, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4081F2', elevation: 3 }}>
                         <Image source={require('./../../Resourses/logo_white.png')} style={{ width: 150, height: 150 }} />

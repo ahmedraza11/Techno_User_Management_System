@@ -16,7 +16,7 @@
     "react-native-tab-view": "0.0.69",
     "react-native-vector-icons": "^4.4.2",
     "react-navigation": "^1.0.0-beta.15",
-    "realm": "^2.20.1",
+    "realm": "^2.21.1",
     "styled-components": "^2.2.1"
   },
   "devDependencies": {

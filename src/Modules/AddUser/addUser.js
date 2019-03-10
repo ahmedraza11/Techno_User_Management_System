@@ -4,10 +4,13 @@ import { AddUserStyles } from './addUserStyles';
 
 import { Header, Avatar, Button, Icon } from 'react-native-elements';
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import Realm from 'realm';
+// import { AdminSchema, UserSchema, queryAllUsers, insertNewUser, USER_SCHEMA } from './../../Constants/AllSchema';
+
 
 export class AddUser extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isDatePickerModelOpen: false,
             name: '',
@@ -21,26 +24,57 @@ export class AddUser extends Component {
             mobileNo: '',
             selectedDate: '',
             Packages: '',
-            Fees: ''
+            Fees: '',
+            realm: null
         }
     }
 
     handleSaveButton() {
         const { name, fatherName, nickName, username, password, lanIP, address, mobileNo, selectedDate, Packages, Fees, switcherName } = this.state;
-        const userObj = {
-            name: name,
-            fatherName: fatherName,
-            nickName: nickName,
-            address: address,
-            username: username,
-            password: password,
-            lanIP: lanIP,
-            switcherName: switcherName,
-            mobileNo: mobileNo,
-            selectedDate: selectedDate,
-            Packages: Packages,
-            Fees: Fees
+        const UserSchema = {
+            name: "UserSchema",
+            primaryKey: 'id',
+            properties: {
+                id: 'string',
+                name: { type: 'string' },
+                fatherName: { type: 'string' },
+                nickName: { type: 'string' },
+                address: { type: 'string' },
+                username: { type: 'string' },
+                password: { type: 'string' },
+                lanIP: { type: 'string' },
+                switcherName: { type: 'string' },
+                mobileNumber: { type: 'string' },
+                creationDate: { type: 'string' },
+                package: { type: 'string' },
+                fees: { type: 'string' },
+                feeHistory: { type: 'string' },
+                status: { type: 'bool' }
+            }
         }
+        const userObj = {
+            id: Math.floor(Date.now() / 1000 * 3).toString(),
+            name: "name",
+            fatherName: "fatherName",
+            nickName: "nickName",
+            address: "address",
+            username: "username",
+            password: "password",
+            lanIP: "lanIP",
+            switcherName: "switcherName",
+            mobileNo: "mobileNo",
+            creationDate: "selectedDate",
+            package: "Packages",
+            fees: "Fees",
+            feeHistory: "asdf",
+            status: true
+        }
+        Realm.open(UserSchema).then(realm => {
+            realm.write(() => {
+                realm.create("UserSchema", userObj);
+            })
+        })
+        // insertNewUser(userObj);
         console.log(userObj);
     }
 
@@ -60,6 +94,7 @@ export class AddUser extends Component {
 
     render() {
         const { navigate, goBack } = this.props.navigation;
+
         return (
             <View style={AddUserStyles.container}>
                 <Header
@@ -69,7 +104,6 @@ export class AddUser extends Component {
                     outerContainerStyles={{ backgroundColor: 'white' }}
                 />
                 <View style={AddUserStyles.mainContainer}>
-
                     <ScrollView contentContainerStyle={AddUserStyles.TextFieldMainContainer} keyboardShouldPersistTaps='handled'>
                         <View style={AddUserStyles.TextFieldContainer}>
                             <Text style={AddUserStyles.TextFieldTitle}>Name</Text>
